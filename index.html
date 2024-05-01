@@ -1,57 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[Karnaz3] Portfolio</title>
+  <title>Portfolio</title>
+  <!-- Link to Tailwind CSS -->
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Link to Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Link to animate.css for animations -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <style>
+    /* Additional CSS styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e5e7eb;
+    }
+
+    .text-primary {
+      color: #6d28d9;
+      /* Purple */
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 4px;
+      background-color: #6d28d9;
+      /* Purple */
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #805ad5;
+      /* Darker Purple */
+    }
+
+    .project-card {
+      animation: fadeInUp 1s ease;
+    }
+
+    /* Profile picture styles */
+    .profile-picture {
+      height: 100;
+      width: 100;
+      border-radius: 70%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Animations */
+    .animated {
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+    .fadeInLeft {
+      animation-name: fadeInLeft;
+    }
+    .fadeInRight {
+      animation-name: fadeInRight;
+    }
+  </style>
 </head>
+
 <body>
-  <header class="bg-gray-800 text-white px-4 py-6 flex justify-between items-center">
-    <h1 class="text-xl font-bold">[Sourav]</h1>
+  <header class="bg-gray-900 text-white px-4 py-6 flex justify-between items-center">
+    <h1 class="text-xl font-bold">Portfolio Bitch</h1>
     <nav class="hidden sm:flex space-x-4">
-      <a href="#about" class="hover:text-gray-400">About</a>
-      <a href="#projects" class="hover:text-gray-400">Projects</a>
-      <a href="#contact" class="hover:text-gray-400">Contact</a>
+      <a href="#about" class="hover:text-gray-300">About</a>
+      <a href="#projects" class="hover:text-gray-300">Projects</a>
+      <a href="#contact" class="hover:text-gray-300">Contact</a>
     </nav>
   </header>
+  <div class="grid grid-cols-2">
+    <div>
+      <main class="container mx-auto px-4 py-16">
 
-  <main class="container mx-auto px-4 py-16">
-    <section id="about" class="mb-12">
-      <h2 class="text-2xl font-bold mb-4">About Me</h2>
-      <p class="text-gray-700 leading-loose">
-        just learning as you can see theres not much to see. 
-      </p>
-    </section>
 
-    <section id="projects" class="mb-12">
-      <h2 class="text-2xl font-bold mb-4">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="bg-white shadow-md rounded-lg p-4">
-          <h3 class="text-xl font-bold mb-2">Project Title</h3>
-          <p class="text-gray-700 mb-4">there is no project ie 404 not found.</p>
-          <a href="#" class="text-blue-500 hover:text-blue-700">View Project</a>
-        </div>
-        </div>
-    </section>
+        <section id="about" class="mb-12">
+          <h2 class="text-2xl font-bold mb-4">About Me</h2>
+          <p class="text-gray-700 leading-loose">
+            Just learning as you can see there's not much to see.
+          </p>
 
-    <section id="contact" class="mb-12">
-      <h2 class="text-2xl font-bold mb-4">Contact</h2>
-      <p class="text-gray-700">Feel free to reach out to me via email or social media.</p>
-      <ul class="flex space-x-4 mt-4">
-        <li>
-          <a href="mailto:[souravtowork@gmail.com]" class="text-blue-500 hover:text-blue-700">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l.708 6h17.292l.708-6L18.416 5.324A5.196 5.196 0 0116 7V19a2 2 0 01-2 2H5a2 2 0 01-2-2V7a5.196 5.196 0 011.584-4.676L3 8z" />
-            </svg>
-          </a>
-        </li>
-        </ul>
-    </section>
-  </main>
+        </section>
+        <section id="projects" class="mb-12">
+          <h2 class="text-2xl font-bold mb-4">Projects</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white shadow-md rounded-lg p-4 project-card animate__animated animate__fadeInUp">
+              <h3 class="text-xl font-bold mb-2">Project Title</h3>
+              <p class="text-gray-700 mb-4">There is no project i.e., 404 not found.</p>
+              <a href="#" class="btn">View Project</a>
+            </div>
+          </div>
+        </section>
 
-  <footer class="bg-gray-800 text-white text-center py-4" style = "position: fixed; width: 100%; bottom: 0;">
-    <p>&copy; [2024] [Karnaz3]</p>
+        <section id="contact" class="mb-12">
+          <h2 class="text-2xl font-bold mb-4">Contact</h2>
+          <p class="text-gray-700">Feel free to reach out to me via email or social media.</p>
+          <ul class="flex space-x-4 mt-4">
+            <li>
+              <a href="mailto:[souravtowork@gmail.com]" class="text-primary hover:text-blue-700">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <div class= "flex justify-center items-center">
+      <!-- Profile Picture Section -->
+      <section id="profile" class="text-center mb-12">
+        <img src="https://avatars.githubusercontent.com/u/162099697?v=4" alt="Profile Picture"
+          class="w-32 h-32 mx-auto profile-picture animated fadeInLeft">
+      </section>
+
+    </div>
+  </div>
+
+
+
+
+  <footer class="bg-gray-900 text-white text-center py-4" style="position: fixed; width: 100%; bottom: 0;">
+    <p>&copy; 2024...Sourav</p>
   </footer>
 </body>
+
 </html>
